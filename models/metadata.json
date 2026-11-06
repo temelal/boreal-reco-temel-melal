@@ -1,0 +1,621 @@
+{
+  "min_support": 0.005,
+  "min_confidence": 0.2,
+  "min_lift_exclusive": 1.0,
+  "low_memory": true,
+  "max_len": null,
+  "mining_date": "2026-11-03T18:18:36-05:00",
+  "n_rules": 11059,
+  "raw_rule_count": 28433,
+  "basket_count": 1000000,
+  "product_count": 98,
+  "recommended_products": 58,
+  "coverage": 0.5918367346938775,
+  "item_supports": {
+    "Steak de boeuf": 0.105492,
+    "Saucisses": 0.084141,
+    "Poitrine de poulet": 0.055945,
+    "Bacon": 0.085813,
+    "Saumon frais": 0.047084,
+    "Crevettes": 0.118848,
+    "Thon en conserve": 0.095841,
+    "Charbon de bois": 0.140561,
+    "Pain à hamburger": 0.100957,
+    "Ketchup": 0.09083,
+    "Moutarde de Dijon": 0.082498,
+    "Relish": 0.059112,
+    "Pâtes alimentaires": 0.134353,
+    "Sauce tomate": 0.105996,
+    "Parmesan râpé": 0.092065,
+    "Huile d'olive": 0.054567,
+    "Riz basmati": 0.080268,
+    "Céréales": 0.139198,
+    "Beurre d'arachide": 0.153726,
+    "Confiture de fraises": 0.055439,
+    "Sirop d'érable": 0.074929,
+    "Farine tout usage": 0.049093,
+    "Sucre blanc": 0.121167,
+    "Sauce soya": 0.060741,
+    "Riz à sushi": 0.083645,
+    "Algues nori": 0.068465,
+    "Gingembre mariné": 0.052317,
+    "Wasabi": 0.049884,
+    "Sauce BBQ": 0.075528,
+    "Croustilles": 0.091312,
+    "Salsa": 0.048692,
+    "Croustilles de maïs": 0.047401,
+    "Bretzels": 0.041301,
+    "Chocolat noir": 0.072676,
+    "Biscuits": 0.161439,
+    "Noix mélangées": 0.155189,
+    "Maïs soufflé": 0.03851,
+    "Lait 2%": 0.118554,
+    "Lait entier": 0.070878,
+    "Beurre": 0.134223,
+    "Crème 35%": 0.035713,
+    "Yogourt grec": 0.102655,
+    "Fromage cheddar": 0.143457,
+    "Fromage en grains": 0.083468,
+    "Fromage suisse": 0.093179,
+    "Fromage à raclette": 0.068508,
+    "Oeufs": 0.094717,
+    "Pain tranché": 0.078791,
+    "Baguette": 0.0694,
+    "Croissants": 0.073193,
+    "Bagels": 0.062716,
+    "Tortillas": 0.103775,
+    "Bananes": 0.033747,
+    "Pommes": 0.091337,
+    "Laitue romaine": 0.10867,
+    "Tomates": 0.080954,
+    "Concombre": 0.069634,
+    "Oignons": 0.122623,
+    "Ail": 0.084526,
+    "Carottes": 0.031441,
+    "Pommes de terre": 0.03694,
+    "Avocat": 0.044275,
+    "Citron": 0.043935,
+    "Champignons": 0.056148,
+    "Poivron rouge": 0.049564,
+    "Bière": 0.150468,
+    "Vin rouge": 0.069978,
+    "Vin blanc": 0.04008,
+    "Café moulu": 0.125887,
+    "Thé vert": 0.092932,
+    "Jus d'orange": 0.068728,
+    "Eau pétillante": 0.082013,
+    "Boisson gazeuse": 0.04278,
+    "Cidre de glace": 0.058224,
+    "Pizza surgelée": 0.112911,
+    "Frites surgelées": 0.065994,
+    "Crème glacée": 0.091824,
+    "Petits pois surgelés": 0.072763,
+    "Couches": 0.083966,
+    "Lingettes pour bébé": 0.070159,
+    "Purée pour bébé": 0.055308,
+    "Lait maternisé": 0.04429,
+    "Sac réutilisable": 0.900026,
+    "Papier essuie-tout": 0.060049,
+    "Savon à vaisselle": 0.14982,
+    "Papier hygiénique": 0.139758,
+    "Sacs à ordures": 0.114565,
+    "Détergent à lessive": 0.079215,
+    "Huile de truffe": 0.000817,
+    "Safran": 0.000818,
+    "Caviar": 0.00081,
+    "Foie gras": 0.000756,
+    "Vinaigre balsamique vieilli": 0.000779,
+    "Bouillon à fondue": 0.048295,
+    "Cornichons": 0.044409,
+    "Charcuteries": 0.046725,
+    "Pain baguette rustique": 0.042219,
+    "Sauce à poutine": 0.060427
+  },
+  "popularity": [
+    {
+      "item": "Sac réutilisable",
+      "count": 900026,
+      "support": 0.900026
+    },
+    {
+      "item": "Biscuits",
+      "count": 161439,
+      "support": 0.161439
+    },
+    {
+      "item": "Noix mélangées",
+      "count": 155189,
+      "support": 0.155189
+    },
+    {
+      "item": "Beurre d'arachide",
+      "count": 153726,
+      "support": 0.153726
+    },
+    {
+      "item": "Bière",
+      "count": 150468,
+      "support": 0.150468
+    },
+    {
+      "item": "Savon à vaisselle",
+      "count": 149820,
+      "support": 0.14982
+    },
+    {
+      "item": "Fromage cheddar",
+      "count": 143457,
+      "support": 0.143457
+    },
+    {
+      "item": "Charbon de bois",
+      "count": 140561,
+      "support": 0.140561
+    },
+    {
+      "item": "Papier hygiénique",
+      "count": 139758,
+      "support": 0.139758
+    },
+    {
+      "item": "Céréales",
+      "count": 139198,
+      "support": 0.139198
+    },
+    {
+      "item": "Pâtes alimentaires",
+      "count": 134353,
+      "support": 0.134353
+    },
+    {
+      "item": "Beurre",
+      "count": 134223,
+      "support": 0.134223
+    },
+    {
+      "item": "Café moulu",
+      "count": 125887,
+      "support": 0.125887
+    },
+    {
+      "item": "Oignons",
+      "count": 122623,
+      "support": 0.122623
+    },
+    {
+      "item": "Sucre blanc",
+      "count": 121167,
+      "support": 0.121167
+    },
+    {
+      "item": "Crevettes",
+      "count": 118848,
+      "support": 0.118848
+    },
+    {
+      "item": "Lait 2%",
+      "count": 118554,
+      "support": 0.118554
+    },
+    {
+      "item": "Sacs à ordures",
+      "count": 114565,
+      "support": 0.114565
+    },
+    {
+      "item": "Pizza surgelée",
+      "count": 112911,
+      "support": 0.112911
+    },
+    {
+      "item": "Laitue romaine",
+      "count": 108670,
+      "support": 0.10867
+    },
+    {
+      "item": "Sauce tomate",
+      "count": 105996,
+      "support": 0.105996
+    },
+    {
+      "item": "Steak de boeuf",
+      "count": 105492,
+      "support": 0.105492
+    },
+    {
+      "item": "Tortillas",
+      "count": 103775,
+      "support": 0.103775
+    },
+    {
+      "item": "Yogourt grec",
+      "count": 102655,
+      "support": 0.102655
+    },
+    {
+      "item": "Pain à hamburger",
+      "count": 100957,
+      "support": 0.100957
+    },
+    {
+      "item": "Thon en conserve",
+      "count": 95841,
+      "support": 0.095841
+    },
+    {
+      "item": "Oeufs",
+      "count": 94717,
+      "support": 0.094717
+    },
+    {
+      "item": "Fromage suisse",
+      "count": 93179,
+      "support": 0.093179
+    },
+    {
+      "item": "Thé vert",
+      "count": 92932,
+      "support": 0.092932
+    },
+    {
+      "item": "Parmesan râpé",
+      "count": 92065,
+      "support": 0.092065
+    },
+    {
+      "item": "Crème glacée",
+      "count": 91824,
+      "support": 0.091824
+    },
+    {
+      "item": "Pommes",
+      "count": 91337,
+      "support": 0.091337
+    },
+    {
+      "item": "Croustilles",
+      "count": 91312,
+      "support": 0.091312
+    },
+    {
+      "item": "Ketchup",
+      "count": 90830,
+      "support": 0.09083
+    },
+    {
+      "item": "Bacon",
+      "count": 85813,
+      "support": 0.085813
+    },
+    {
+      "item": "Ail",
+      "count": 84526,
+      "support": 0.084526
+    },
+    {
+      "item": "Saucisses",
+      "count": 84141,
+      "support": 0.084141
+    },
+    {
+      "item": "Couches",
+      "count": 83966,
+      "support": 0.083966
+    },
+    {
+      "item": "Riz à sushi",
+      "count": 83645,
+      "support": 0.083645
+    },
+    {
+      "item": "Fromage en grains",
+      "count": 83468,
+      "support": 0.083468
+    },
+    {
+      "item": "Moutarde de Dijon",
+      "count": 82498,
+      "support": 0.082498
+    },
+    {
+      "item": "Eau pétillante",
+      "count": 82013,
+      "support": 0.082013
+    },
+    {
+      "item": "Tomates",
+      "count": 80954,
+      "support": 0.080954
+    },
+    {
+      "item": "Riz basmati",
+      "count": 80268,
+      "support": 0.080268
+    },
+    {
+      "item": "Détergent à lessive",
+      "count": 79215,
+      "support": 0.079215
+    },
+    {
+      "item": "Pain tranché",
+      "count": 78791,
+      "support": 0.078791
+    },
+    {
+      "item": "Sauce BBQ",
+      "count": 75528,
+      "support": 0.075528
+    },
+    {
+      "item": "Sirop d'érable",
+      "count": 74929,
+      "support": 0.074929
+    },
+    {
+      "item": "Croissants",
+      "count": 73193,
+      "support": 0.073193
+    },
+    {
+      "item": "Petits pois surgelés",
+      "count": 72763,
+      "support": 0.072763
+    },
+    {
+      "item": "Chocolat noir",
+      "count": 72676,
+      "support": 0.072676
+    },
+    {
+      "item": "Lait entier",
+      "count": 70878,
+      "support": 0.070878
+    },
+    {
+      "item": "Lingettes pour bébé",
+      "count": 70159,
+      "support": 0.070159
+    },
+    {
+      "item": "Vin rouge",
+      "count": 69978,
+      "support": 0.069978
+    },
+    {
+      "item": "Concombre",
+      "count": 69634,
+      "support": 0.069634
+    },
+    {
+      "item": "Baguette",
+      "count": 69400,
+      "support": 0.0694
+    },
+    {
+      "item": "Jus d'orange",
+      "count": 68728,
+      "support": 0.068728
+    },
+    {
+      "item": "Fromage à raclette",
+      "count": 68508,
+      "support": 0.068508
+    },
+    {
+      "item": "Algues nori",
+      "count": 68465,
+      "support": 0.068465
+    },
+    {
+      "item": "Frites surgelées",
+      "count": 65994,
+      "support": 0.065994
+    },
+    {
+      "item": "Bagels",
+      "count": 62716,
+      "support": 0.062716
+    },
+    {
+      "item": "Sauce soya",
+      "count": 60741,
+      "support": 0.060741
+    },
+    {
+      "item": "Sauce à poutine",
+      "count": 60427,
+      "support": 0.060427
+    },
+    {
+      "item": "Papier essuie-tout",
+      "count": 60049,
+      "support": 0.060049
+    },
+    {
+      "item": "Relish",
+      "count": 59112,
+      "support": 0.059112
+    },
+    {
+      "item": "Cidre de glace",
+      "count": 58224,
+      "support": 0.058224
+    },
+    {
+      "item": "Champignons",
+      "count": 56148,
+      "support": 0.056148
+    },
+    {
+      "item": "Poitrine de poulet",
+      "count": 55945,
+      "support": 0.055945
+    },
+    {
+      "item": "Confiture de fraises",
+      "count": 55439,
+      "support": 0.055439
+    },
+    {
+      "item": "Purée pour bébé",
+      "count": 55308,
+      "support": 0.055308
+    },
+    {
+      "item": "Huile d'olive",
+      "count": 54567,
+      "support": 0.054567
+    },
+    {
+      "item": "Gingembre mariné",
+      "count": 52317,
+      "support": 0.052317
+    },
+    {
+      "item": "Wasabi",
+      "count": 49884,
+      "support": 0.049884
+    },
+    {
+      "item": "Poivron rouge",
+      "count": 49564,
+      "support": 0.049564
+    },
+    {
+      "item": "Farine tout usage",
+      "count": 49093,
+      "support": 0.049093
+    },
+    {
+      "item": "Salsa",
+      "count": 48692,
+      "support": 0.048692
+    },
+    {
+      "item": "Bouillon à fondue",
+      "count": 48295,
+      "support": 0.048295
+    },
+    {
+      "item": "Croustilles de maïs",
+      "count": 47401,
+      "support": 0.047401
+    },
+    {
+      "item": "Saumon frais",
+      "count": 47084,
+      "support": 0.047084
+    },
+    {
+      "item": "Charcuteries",
+      "count": 46725,
+      "support": 0.046725
+    },
+    {
+      "item": "Cornichons",
+      "count": 44409,
+      "support": 0.044409
+    },
+    {
+      "item": "Lait maternisé",
+      "count": 44290,
+      "support": 0.04429
+    },
+    {
+      "item": "Avocat",
+      "count": 44275,
+      "support": 0.044275
+    },
+    {
+      "item": "Citron",
+      "count": 43935,
+      "support": 0.043935
+    },
+    {
+      "item": "Boisson gazeuse",
+      "count": 42780,
+      "support": 0.04278
+    },
+    {
+      "item": "Pain baguette rustique",
+      "count": 42219,
+      "support": 0.042219
+    },
+    {
+      "item": "Bretzels",
+      "count": 41301,
+      "support": 0.041301
+    },
+    {
+      "item": "Vin blanc",
+      "count": 40080,
+      "support": 0.04008
+    },
+    {
+      "item": "Maïs soufflé",
+      "count": 38510,
+      "support": 0.03851
+    },
+    {
+      "item": "Pommes de terre",
+      "count": 36940,
+      "support": 0.03694
+    },
+    {
+      "item": "Crème 35%",
+      "count": 35713,
+      "support": 0.035713
+    },
+    {
+      "item": "Bananes",
+      "count": 33747,
+      "support": 0.033747
+    },
+    {
+      "item": "Carottes",
+      "count": 31441,
+      "support": 0.031441
+    },
+    {
+      "item": "Safran",
+      "count": 818,
+      "support": 0.000818
+    },
+    {
+      "item": "Huile de truffe",
+      "count": 817,
+      "support": 0.000817
+    },
+    {
+      "item": "Caviar",
+      "count": 810,
+      "support": 0.00081
+    },
+    {
+      "item": "Vinaigre balsamique vieilli",
+      "count": 779,
+      "support": 0.000779
+    },
+    {
+      "item": "Foie gras",
+      "count": 756,
+      "support": 0.000756
+    }
+  ],
+  "strength_thresholds": {
+    "moderate": 1.2,
+    "strong": 2.0,
+    "very_strong": 4.0
+  },
+  "season_basket_counts": {
+    "summer": 252474,
+    "winter": 246965
+  },
+  "python_version": "3.12.14",
+  "package_versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "mlxtend": "0.25.0"
+  }
+}

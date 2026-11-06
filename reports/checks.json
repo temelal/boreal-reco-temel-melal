@@ -1,0 +1,232 @@
+{
+  "environment": {
+    "execution": "local",
+    "python": "3.12.14"
+  },
+  "engine_and_artifact_checks": {
+    "checked_at_utc": "2026-11-03T23:20:02.753769+00:00",
+    "passed": 14,
+    "failed": 0,
+    "checks": [
+      {
+        "name": "multi_item_subset_matching",
+        "status": "passed",
+        "detail": "a multi-item antecedent fires only when every triggering item is present; input rules stay unchanged",
+        "seconds": 0.0
+      },
+      {
+        "name": "descending_lift_and_limit",
+        "status": "passed",
+        "detail": "suggestions follow descending lift even when confidence ranks them differently, and respect the requested limit",
+        "seconds": 0.0
+      },
+      {
+        "name": "graded_duplicate_suggestion_higher_lift",
+        "status": "passed",
+        "detail": "two matching rules that suggest one item produce one suggestion, backed by the higher-lift rule",
+        "seconds": 0.0
+      },
+      {
+        "name": "graded_existing_item_exclusion",
+        "status": "passed",
+        "detail": "items already in the basket are excluded in both rule recommendations and popularity fallback, including a full catalogue basket",
+        "seconds": 0.0034
+      },
+      {
+        "name": "graded_empty_basket_fallback",
+        "status": "passed",
+        "detail": {
+          "fallback_items": [
+            "Sac réutilisable",
+            "Biscuits",
+            "Noix mélangées",
+            "Beurre d'arachide",
+            "Bière"
+          ]
+        },
+        "seconds": 0.0019
+      },
+      {
+        "name": "graded_no_rule_fires_fallback",
+        "status": "passed",
+        "detail": "an unmatched partial basket gets a deduplicated popularity fallback that excludes its existing items",
+        "seconds": 0.0
+      },
+      {
+        "name": "graded_rare_product_without_rules",
+        "status": "passed",
+        "detail": {
+          "item": "Foie gras",
+          "support": 0.000756,
+          "min_support": 0.005,
+          "reason": "its individual support is below the minimum, so no frequent superset and no retained rule can contain it"
+        },
+        "seconds": 0.0039
+      },
+      {
+        "name": "invalid_and_independent_rules_rejected",
+        "status": "passed",
+        "detail": "empty antecedents, multi-item consequents, and lift at or below one do not create suggestions",
+        "seconds": 0.0
+      },
+      {
+        "name": "saved_schema_catalogue_and_counts",
+        "status": "passed",
+        "detail": {
+          "catalogue_products": 98,
+          "basket_count": 1000000,
+          "retained_rules": 11059,
+          "transaction_columns": [
+            "TransactionID",
+            "Date",
+            "CustomerID",
+            "Item"
+          ]
+        },
+        "seconds": 0.0005
+      },
+      {
+        "name": "saved_rule_metrics_and_uniqueness",
+        "status": "passed",
+        "detail": "all saved rules have valid items, disjoint sides, singleton consequents, valid thresholds, lift consistent with consequent frequency, and no duplicate rule signatures",
+        "seconds": 0.0157
+      },
+      {
+        "name": "coverage_matches_saved_rules",
+        "status": "passed",
+        "detail": {
+          "recommendable_products": 58,
+          "catalogue_products": 98,
+          "coverage": 0.5918367346938775
+        },
+        "seconds": 0.0008
+      },
+      {
+        "name": "popularity_matches_basket_frequencies",
+        "status": "passed",
+        "detail": "popularity uses basket frequency, is sorted in descending order, and agrees with metadata item supports",
+        "seconds": 0.0
+      },
+      {
+        "name": "notebook_executed_without_errors",
+        "status": "passed",
+        "detail": {
+          "notebook": "notebooks/01_mining.ipynb",
+          "code_cells": 13,
+          "outputs": 43,
+          "error_outputs": 0
+        },
+        "seconds": 0.0009
+      },
+      {
+        "name": "offline_online_separation_and_no_code_comments",
+        "status": "passed",
+        "detail": "application files parse successfully, import/call no Apriori mining code, and delivered Python/notebook code contains no comment tokens",
+        "seconds": 0.0085
+      }
+    ]
+  },
+  "interface_checks": {
+    "checked_at_utc": "2026-11-02T06:02:23.727204+00:00",
+    "passed": 5,
+    "failed": 0,
+    "streamlit_exceptions": [],
+    "cases": [
+      {
+        "case": "startup, all products and empty-basket fallback",
+        "passed": true,
+        "evidence": {
+          "catalogue_products": 98,
+          "saved_rules": 11059,
+          "fallback_products": [
+            "Sac réutilisable",
+            "Biscuits",
+            "Noix mélangées",
+            "Beurre d'arachide",
+            "Bière"
+          ]
+        }
+      },
+      {
+        "case": "english/french search and category filter",
+        "passed": true,
+        "evidence": {
+          "english_search": true,
+          "french_search": true,
+          "empty_result_message": true,
+          "baby_products": [
+            "Couches",
+            "Lait maternisé",
+            "Lingettes pour bébé",
+            "Purée pour bébé"
+          ]
+        }
+      },
+      {
+        "case": "add, rule recommendations, exact evidence table and remove",
+        "passed": true,
+        "evidence": {
+          "selected_rules": 5,
+          "lifts": [
+            6.21,
+            6.16,
+            6.06,
+            5.98,
+            5.84
+          ],
+          "remove_updates_total": true
+        }
+      },
+      {
+        "case": "multi-item basket, subset rules, total and clear",
+        "passed": true,
+        "evidence": {
+          "basket": [
+            "Bouillon à fondue",
+            "Charcuteries",
+            "Cornichons",
+            "Pain baguette rustique"
+          ],
+          "selected_rules": 4,
+          "selected_multi_item_rules": 4,
+          "clear_updates_total": true
+        }
+      },
+      {
+        "case": "rare product explanation and no-rule fallback",
+        "passed": true,
+        "evidence": {
+          "rare_product": "Foie gras",
+          "support": 0.000756,
+          "fallback_count": 5
+        }
+      }
+    ]
+  },
+  "delivered_engine_suite": {
+    "command": "python -m unittest discover -s tests",
+    "tests_run": 10,
+    "passed": 10,
+    "failed": 0
+  },
+  "executed_notebook": {
+    "code_cells": 13,
+    "outputs": 43,
+    "error_outputs": 0
+  },
+  "code_checks": {
+    "no_comment_tokens": true,
+    "application_mines_no_rules": true
+  },
+  "duplicate_product_suite": {
+    "checked_at_utc": "2026-11-03T23:21:21.251752+00:00",
+    "tests_run": 3,
+    "passed": 3,
+    "failed": 0,
+    "source": "independent basket sets from the original transaction archive",
+    "overlap_baskets": 3009,
+    "union_baskets": 108610,
+    "original_catalogue_products": 98,
+    "alternative_model_products": 97
+  }
+}

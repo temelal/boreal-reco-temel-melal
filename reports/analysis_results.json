@@ -1,0 +1,681 @@
+{
+  "profile": {
+    "rows": 8379837,
+    "baskets": 1000000,
+    "products": 98,
+    "mean_basket_size": 8.379837,
+    "duplicate_basket_items": 0,
+    "missing_values": 0,
+    "first_date": "2026-01-01",
+    "last_date": "2026-12-31",
+    "load_seconds": 0.9321215840027435,
+    "long_memory_mib": 87.92626094818115,
+    "wide_seconds": 0.0938412920004339,
+    "matrix_mib": 93.4600830078125,
+    "dataframe_mib": 93.46020889282227
+  },
+  "default_run": {
+    "min_support": 0.05,
+    "min_confidence": 0.2,
+    "low_memory": false,
+    "max_len": null,
+    "basket_count": 1000000,
+    "extra_memory_mib": 1024,
+    "baseline_memory_mib": 100.046875,
+    "outcome": "memoryerror",
+    "error": "Unable to allocate 4.76 GiB for an array with shape (2556, 2, 1000000) and data type bool",
+    "n_itemsets": null,
+    "n_rules": null,
+    "elapsed_seconds": 0.06309383299958427,
+    "peak_memory_mib": 201.296875
+  },
+  "annual_runs": [
+    {
+      "min_support": 0.05,
+      "min_confidence": 0.2,
+      "low_memory": true,
+      "max_len": null,
+      "basket_count": 1000000,
+      "extra_memory_mib": 1024,
+      "baseline_memory_mib": 97.578125,
+      "mining_seconds": 1.1265406250022352,
+      "rule_seconds": 0.0016693750003469177,
+      "n_itemsets": 191,
+      "n_rules": 282,
+      "outcome": "completed",
+      "elapsed_seconds": 1.129771708001499,
+      "peak_memory_mib": 371.96875
+    },
+    {
+      "min_support": 0.02,
+      "min_confidence": 0.2,
+      "low_memory": true,
+      "max_len": null,
+      "basket_count": 1000000,
+      "extra_memory_mib": 1024,
+      "baseline_memory_mib": 97.75,
+      "mining_seconds": 3.0204750420016353,
+      "rule_seconds": 0.006991667003603652,
+      "n_itemsets": 658,
+      "n_rules": 3159,
+      "outcome": "completed",
+      "elapsed_seconds": 3.0356649169989396,
+      "peak_memory_mib": 405.765625
+    },
+    {
+      "min_support": 0.01,
+      "min_confidence": 0.2,
+      "low_memory": true,
+      "max_len": null,
+      "basket_count": 1000000,
+      "extra_memory_mib": 1024,
+      "baseline_memory_mib": 98.1875,
+      "mining_seconds": 8.921161958001903,
+      "rule_seconds": 0.021132207999471575,
+      "n_itemsets": 2267,
+      "n_rules": 9736,
+      "outcome": "completed",
+      "elapsed_seconds": 8.979048374996637,
+      "peak_memory_mib": 417.5
+    },
+    {
+      "min_support": 0.005,
+      "min_confidence": 0.2,
+      "low_memory": true,
+      "max_len": null,
+      "basket_count": 1000000,
+      "extra_memory_mib": 1024,
+      "baseline_memory_mib": 97.9375,
+      "mining_seconds": 25.471273957999074,
+      "rule_seconds": 0.09483341599843698,
+      "n_itemsets": 7106,
+      "n_rules": 28433,
+      "outcome": "completed",
+      "elapsed_seconds": 25.66399329200067,
+      "peak_memory_mib": 398.25
+    }
+  ],
+  "coverage_comparison": [
+    {
+      "min_support": 0.05,
+      "saved_style_rules": 173,
+      "recommendable_products": 27,
+      "coverage": 0.2755102040816326
+    },
+    {
+      "min_support": 0.02,
+      "saved_style_rules": 1264,
+      "recommendable_products": 57,
+      "coverage": 0.5816326530612245
+    },
+    {
+      "min_support": 0.01,
+      "saved_style_rules": 3460,
+      "recommendable_products": 58,
+      "coverage": 0.5918367346938775
+    },
+    {
+      "min_support": 0.005,
+      "saved_style_rules": 11059,
+      "recommendable_products": 58,
+      "coverage": 0.5918367346938775
+    }
+  ],
+  "duplicate_audit": {
+    "normalised_item_duplicate_groups": [],
+    "normalised_english_duplicate_groups": [],
+    "pair": [
+      {
+        "item": "Baguette",
+        "item_en": "baguette",
+        "category": "boulangerie",
+        "price": 2.99,
+        "baskets": 69400,
+        "support": 0.0694
+      },
+      {
+        "item": "Pain baguette rustique",
+        "item_en": "rustic baguette",
+        "category": "boulangerie",
+        "price": 3.99,
+        "baskets": 42219,
+        "support": 0.042219
+      }
+    ],
+    "overlap_baskets": 3009,
+    "union_baskets": 108610,
+    "naive_sum": 111619,
+    "raw_products": 98,
+    "merged_products": 97,
+    "raw_presences": 8379837,
+    "merged_presences": 8376828,
+    "decision": "keep the two catalogue records separate",
+    "exact_identity_verified": false,
+    "profiles": [
+      {
+        "product": "baguette",
+        "summer_support": 0.06960716747070986,
+        "winter_support": 0.06933371125463123,
+        "raclette_confidence": 0.06819884726224784,
+        "raclette_lift": 0.9954873483716915,
+        "fondue_confidence": 0.04707492795389049,
+        "fondue_lift": 0.9747370939826171
+      },
+      {
+        "product": "rustic baguette",
+        "summer_support": 0.02162598921077022,
+        "winter_support": 0.06923653149231672,
+        "raclette_confidence": 0.6543736232501954,
+        "raclette_lift": 9.5517840726659,
+        "fondue_confidence": 0.40998128804566664,
+        "fondue_lift": 8.489104214632293
+      }
+    ]
+  },
+  "merged_sensitivity": {
+    "min_support": 0.005,
+    "min_confidence": 0.2,
+    "low_memory": true,
+    "max_len": null,
+    "basket_count": 1000000,
+    "extra_memory_mib": 1024,
+    "baseline_memory_mib": 97.46875,
+    "mining_seconds": 25.467516832999536,
+    "rule_seconds": 0.08764674999838462,
+    "n_itemsets": 7142,
+    "n_rules": 28482,
+    "outcome": "completed",
+    "elapsed_seconds": 25.651684582997405,
+    "peak_memory_mib": 441.34375,
+    "product_count": 97,
+    "denominator": 97,
+    "saved_style_rules": 11094,
+    "recommended_products": 58,
+    "coverage": 0.5979381443298969
+  },
+  "duplicate_rule_comparison": [
+    {
+      "representation": "raw regular",
+      "antecedent": "baguette",
+      "consequent": "raclette cheese",
+      "support": 0.004733,
+      "confidence": 0.06819884726224784,
+      "lift": 0.9954873483716915,
+      "passes_confidence": false
+    },
+    {
+      "representation": "raw regular",
+      "antecedent": "baguette",
+      "consequent": "fondue broth",
+      "support": 0.003267,
+      "confidence": 0.04707492795389049,
+      "lift": 0.9747370939826171,
+      "passes_confidence": false
+    },
+    {
+      "representation": "raw rustic",
+      "antecedent": "rustic baguette",
+      "consequent": "raclette cheese",
+      "support": 0.027627,
+      "confidence": 0.6543736232501954,
+      "lift": 9.5517840726659,
+      "passes_confidence": true
+    },
+    {
+      "representation": "raw rustic",
+      "antecedent": "rustic baguette",
+      "consequent": "fondue broth",
+      "support": 0.017309,
+      "confidence": 0.40998128804566664,
+      "lift": 8.489104214632293,
+      "passes_confidence": true
+    },
+    {
+      "representation": "merged family",
+      "antecedent": "baguette family",
+      "consequent": "raclette cheese",
+      "support": 0.03042,
+      "confidence": 0.28008470674891817,
+      "lift": 4.088350364175252,
+      "passes_confidence": true
+    },
+    {
+      "representation": "merged family",
+      "antecedent": "baguette family",
+      "consequent": "fondue broth",
+      "support": 0.019402,
+      "confidence": 0.17863916766411933,
+      "lift": 3.6989164026114367,
+      "passes_confidence": false
+    }
+  ],
+  "confidence_top10": [
+    {
+      "if basket contains": "cucumber",
+      "then suggest": "reusable bag",
+      "support": 0.062853,
+      "confidence": 0.9026194100583049,
+      "lift": 1.0028814834885935
+    },
+    {
+      "if basket contains": "ice cider",
+      "then suggest": "reusable bag",
+      "support": 0.05252,
+      "confidence": 0.902033525693872,
+      "lift": 1.0022305196670673
+    },
+    {
+      "if basket contains": "tomato sauce",
+      "then suggest": "reusable bag",
+      "support": 0.095588,
+      "confidence": 0.9018076153817125,
+      "lift": 1.001979515460345
+    },
+    {
+      "if basket contains": "relish",
+      "then suggest": "reusable bag",
+      "support": 0.053301,
+      "confidence": 0.9016950872919204,
+      "lift": 1.0018544878613733
+    },
+    {
+      "if basket contains": "olive oil",
+      "then suggest": "reusable bag",
+      "support": 0.049201,
+      "confidence": 0.9016621767735078,
+      "lift": 1.0018179216750491
+    },
+    {
+      "if basket contains": "apples",
+      "then suggest": "reusable bag",
+      "support": 0.082351,
+      "confidence": 0.9016170883650656,
+      "lift": 1.0017678248906872
+    },
+    {
+      "if basket contains": "dijon mustard",
+      "then suggest": "reusable bag",
+      "support": 0.074374,
+      "confidence": 0.9015248854517686,
+      "lift": 1.0016653801687603
+    },
+    {
+      "if basket contains": "swiss cheese",
+      "then suggest": "reusable bag",
+      "support": 0.083997,
+      "confidence": 0.9014584831346119,
+      "lift": 1.0015916019477347
+    },
+    {
+      "if basket contains": "beef steak",
+      "then suggest": "reusable bag",
+      "support": 0.095092,
+      "confidence": 0.9014143252568915,
+      "lift": 1.001542539056529
+    },
+    {
+      "if basket contains": "avocado",
+      "then suggest": "reusable bag",
+      "support": 0.039907,
+      "confidence": 0.9013438735177866,
+      "lift": 1.001464261607761
+    }
+  ],
+  "lift_top10": [
+    {
+      "if basket contains": "raclette cheese",
+      "then suggest": "fondue broth",
+      "support": 0.033651,
+      "confidence": 0.4911981082501314,
+      "lift": 10.170785966458876
+    },
+    {
+      "if basket contains": "fondue broth",
+      "then suggest": "raclette cheese",
+      "support": 0.033651,
+      "confidence": 0.6967802049901646,
+      "lift": 10.170785966458874
+    },
+    {
+      "if basket contains": "deli meats",
+      "then suggest": "raclette cheese",
+      "support": 0.031932,
+      "confidence": 0.6834028892455859,
+      "lift": 9.975519490360044
+    },
+    {
+      "if basket contains": "raclette cheese",
+      "then suggest": "deli meats",
+      "support": 0.031932,
+      "confidence": 0.4661061481870731,
+      "lift": 9.975519490360044
+    },
+    {
+      "if basket contains": "raclette cheese",
+      "then suggest": "pickles",
+      "support": 0.029733,
+      "confidence": 0.4340077071290944,
+      "lift": 9.77296735186774
+    },
+    {
+      "if basket contains": "pickles",
+      "then suggest": "raclette cheese",
+      "support": 0.029733,
+      "confidence": 0.669526447341755,
+      "lift": 9.772967351867738
+    },
+    {
+      "if basket contains": "rustic baguette",
+      "then suggest": "raclette cheese",
+      "support": 0.027627,
+      "confidence": 0.6543736232501954,
+      "lift": 9.5517840726659
+    },
+    {
+      "if basket contains": "raclette cheese",
+      "then suggest": "rustic baguette",
+      "support": 0.027627,
+      "confidence": 0.4032667717638816,
+      "lift": 9.5517840726659
+    },
+    {
+      "if basket contains": "nori seaweed",
+      "then suggest": "sushi rice",
+      "support": 0.054431,
+      "confidence": 0.7950193529540641,
+      "lift": 9.504684714616106
+    },
+    {
+      "if basket contains": "sushi rice",
+      "then suggest": "nori seaweed",
+      "support": 0.054431,
+      "confidence": 0.6507382389861917,
+      "lift": 9.504684714616106
+    }
+  ],
+  "bag_top10_count": 10,
+  "bag_rule_lift_min": 0.9965019336199719,
+  "bag_rule_lift_max": 1.0028814834885935,
+  "diapers_beer": [
+    {
+      "if basket contains": "diapers",
+      "then suggest": "beer",
+      "support": 0.030696,
+      "confidence": 0.3655765428864064,
+      "lift": 2.429596611149257
+    }
+  ],
+  "season_runs": {
+    "summer": {
+      "min_support": 0.005,
+      "min_confidence": 0.2,
+      "low_memory": true,
+      "max_len": null,
+      "basket_count": 252474,
+      "extra_memory_mib": 1024,
+      "baseline_memory_mib": 97.921875,
+      "mining_seconds": 9.392014791999827,
+      "rule_seconds": 0.2052088329946855,
+      "n_itemsets": 9867,
+      "n_rules": 64011,
+      "outcome": "completed",
+      "elapsed_seconds": 9.892540583001391,
+      "peak_memory_mib": 308.484375
+    },
+    "winter": {
+      "min_support": 0.005,
+      "min_confidence": 0.2,
+      "low_memory": true,
+      "max_len": null,
+      "basket_count": 246965,
+      "extra_memory_mib": 1024,
+      "baseline_memory_mib": 98.140625,
+      "mining_seconds": 5.136104666999017,
+      "rule_seconds": 0.06427020799310412,
+      "n_itemsets": 6042,
+      "n_rules": 18348,
+      "outcome": "completed",
+      "elapsed_seconds": 5.267892709001899,
+      "peak_memory_mib": 209.765625
+    }
+  },
+  "season_comparison": [
+    {
+      "season": "summer",
+      "if basket contains": "charcoal",
+      "then suggest": "beef steak",
+      "baskets_together": 47297,
+      "support": 0.18733414133732582,
+      "confidence": 0.6948084381243389,
+      "lift": 3.4986251616873623,
+      "in_mined_rules": true,
+      "in_filtered_rules": true
+    },
+    {
+      "season": "winter",
+      "if basket contains": "charcoal",
+      "then suggest": "beef steak",
+      "baskets_together": 6210,
+      "support": 0.025145263498876358,
+      "confidence": 0.509016393442623,
+      "lift": 12.660815148208014,
+      "in_mined_rules": true,
+      "in_filtered_rules": true
+    },
+    {
+      "season": "summer",
+      "if basket contains": "charcoal",
+      "then suggest": "burger buns",
+      "baskets_together": 44735,
+      "support": 0.1771865617845798,
+      "confidence": 0.6571718180749795,
+      "lift": 3.4878872734215336,
+      "in_mined_rules": true,
+      "in_filtered_rules": true
+    },
+    {
+      "season": "winter",
+      "if basket contains": "charcoal",
+      "then suggest": "burger buns",
+      "baskets_together": 5816,
+      "support": 0.02354989573421335,
+      "confidence": 0.47672131147540986,
+      "lift": 12.266459542459323,
+      "in_mined_rules": true,
+      "in_filtered_rules": true
+    },
+    {
+      "season": "summer",
+      "if basket contains": "raclette cheese",
+      "then suggest": "deli meats",
+      "baskets_together": 1836,
+      "support": 0.007272035932412843,
+      "confidence": 0.26577880718008107,
+      "lift": 12.006126062620108,
+      "in_mined_rules": true,
+      "in_filtered_rules": true
+    },
+    {
+      "season": "winter",
+      "if basket contains": "raclette cheese",
+      "then suggest": "deli meats",
+      "baskets_together": 15812,
+      "support": 0.06402526673820177,
+      "confidence": 0.5254028908456554,
+      "lift": 6.718241945619617,
+      "in_mined_rules": true,
+      "in_filtered_rules": true
+    },
+    {
+      "season": "summer",
+      "if basket contains": "diapers",
+      "then suggest": "beer",
+      "baskets_together": 7527,
+      "support": 0.029812970840561802,
+      "confidence": 0.3697136401591434,
+      "lift": 2.019451377818778,
+      "in_mined_rules": true,
+      "in_filtered_rules": true
+    },
+    {
+      "season": "winter",
+      "if basket contains": "diapers",
+      "then suggest": "beer",
+      "baskets_together": 7146,
+      "support": 0.028935274229141782,
+      "confidence": 0.36780071027844974,
+      "lift": 2.5418038508483694,
+      "in_mined_rules": true,
+      "in_filtered_rules": true
+    }
+  ],
+  "disappearing_rule": [
+    {
+      "season": "summer",
+      "if basket contains": "ketchup, burger buns, beef steak",
+      "then suggest": "relish",
+      "baskets_together": 6952,
+      "support": 0.027535508606826842,
+      "confidence": 0.35482059919358955,
+      "lift": 3.4211562329884413,
+      "in_mined_rules": true,
+      "in_filtered_rules": true
+    },
+    {
+      "season": "winter",
+      "if basket contains": "ketchup, burger buns, beef steak",
+      "then suggest": "relish",
+      "baskets_together": 877,
+      "support": 0.0035511104812422814,
+      "confidence": 0.3508,
+      "lift": 12.990751536962064,
+      "in_mined_rules": false,
+      "in_filtered_rules": false
+    }
+  ],
+  "coverage": 0.5918367346938775,
+  "recommended_products": 58,
+  "saved_rules": 11059,
+  "multi_antecedent_rules": 10705,
+  "uncovered_products": [
+    "2% milk",
+    "aged balsamic vinegar",
+    "apples",
+    "bagels",
+    "baguette",
+    "basmati rice",
+    "butter",
+    "canned tuna",
+    "carrots",
+    "caviar",
+    "cereal",
+    "cheddar cheese",
+    "chicken breast",
+    "cookies",
+    "dark chocolate",
+    "dijon mustard",
+    "dish soap",
+    "foie gras",
+    "frozen peas",
+    "frozen pizza",
+    "garbage bags",
+    "greek yogurt",
+    "green tea",
+    "ice cider",
+    "ice cream",
+    "laundry detergent",
+    "mixed nuts",
+    "onions",
+    "paper towels",
+    "peanut butter",
+    "saffron",
+    "shrimp",
+    "sliced bread",
+    "sparkling water",
+    "strawberry jam",
+    "swiss cheese",
+    "toilet paper",
+    "tortillas",
+    "truffle oil",
+    "white sugar"
+  ],
+  "top10_products": [
+    {
+      "product": "reusable bag",
+      "baskets": 900026,
+      "support": 0.900026
+    },
+    {
+      "product": "cookies",
+      "baskets": 161439,
+      "support": 0.161439
+    },
+    {
+      "product": "mixed nuts",
+      "baskets": 155189,
+      "support": 0.155189
+    },
+    {
+      "product": "peanut butter",
+      "baskets": 153726,
+      "support": 0.153726
+    },
+    {
+      "product": "beer",
+      "baskets": 150468,
+      "support": 0.150468
+    },
+    {
+      "product": "dish soap",
+      "baskets": 149820,
+      "support": 0.14982
+    },
+    {
+      "product": "cheddar cheese",
+      "baskets": 143457,
+      "support": 0.143457
+    },
+    {
+      "product": "charcoal",
+      "baskets": 140561,
+      "support": 0.140561
+    },
+    {
+      "product": "toilet paper",
+      "baskets": 139758,
+      "support": 0.139758
+    },
+    {
+      "product": "cereal",
+      "baskets": 139198,
+      "support": 0.139198
+    }
+  ],
+  "rarest5_products": [
+    {
+      "product": "foie gras",
+      "baskets": 756,
+      "support": 0.000756
+    },
+    {
+      "product": "aged balsamic vinegar",
+      "baskets": 779,
+      "support": 0.000779
+    },
+    {
+      "product": "caviar",
+      "baskets": 810,
+      "support": 0.00081
+    },
+    {
+      "product": "truffle oil",
+      "baskets": 817,
+      "support": 0.000817
+    },
+    {
+      "product": "saffron",
+      "baskets": 818,
+      "support": 0.000818
+    }
+  ]
+}
