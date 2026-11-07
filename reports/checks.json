@@ -4,9 +4,8 @@
     "python": "3.12.14"
   },
   "engine_and_artifact_checks": {
-    "checked_at_utc": "2026-11-03T23:20:02.753769+00:00",
-    "passed": 14,
-    "failed": 0,
+    "checked_at_utc": "2026-11-07T04:35:50.134194+00:00",
+    "python_version": "3.12.14",
     "checks": [
       {
         "name": "multi_item_subset_matching",
@@ -30,7 +29,7 @@
         "name": "graded_existing_item_exclusion",
         "status": "passed",
         "detail": "items already in the basket are excluded in both rule recommendations and popularity fallback, including a full catalogue basket",
-        "seconds": 0.0034
+        "seconds": 0.0046
       },
       {
         "name": "graded_empty_basket_fallback",
@@ -44,7 +43,7 @@
             "Bière"
           ]
         },
-        "seconds": 0.0019
+        "seconds": 0.0024
       },
       {
         "name": "graded_no_rule_fires_fallback",
@@ -61,7 +60,7 @@
           "min_support": 0.005,
           "reason": "its individual support is below the minimum, so no frequent superset and no retained rule can contain it"
         },
-        "seconds": 0.0039
+        "seconds": 0.005
       },
       {
         "name": "invalid_and_independent_rules_rejected",
@@ -83,13 +82,13 @@
             "Item"
           ]
         },
-        "seconds": 0.0005
+        "seconds": 0.0007
       },
       {
         "name": "saved_rule_metrics_and_uniqueness",
         "status": "passed",
         "detail": "all saved rules have valid items, disjoint sides, singleton consequents, valid thresholds, lift consistent with consequent frequency, and no duplicate rule signatures",
-        "seconds": 0.0157
+        "seconds": 0.0201
       },
       {
         "name": "coverage_matches_saved_rules",
@@ -99,13 +98,13 @@
           "catalogue_products": 98,
           "coverage": 0.5918367346938775
         },
-        "seconds": 0.0008
+        "seconds": 0.0011
       },
       {
         "name": "popularity_matches_basket_frequencies",
         "status": "passed",
         "detail": "popularity uses basket frequency, is sorted in descending order, and agrees with metadata item supports",
-        "seconds": 0.0
+        "seconds": 0.0001
       },
       {
         "name": "notebook_executed_without_errors",
@@ -116,18 +115,21 @@
           "outputs": 43,
           "error_outputs": 0
         },
-        "seconds": 0.0009
+        "seconds": 0.0022
       },
       {
         "name": "offline_online_separation_and_no_code_comments",
         "status": "passed",
         "detail": "application files parse successfully, import/call no Apriori mining code, and delivered Python/notebook code contains no comment tokens",
-        "seconds": 0.0085
+        "seconds": 0.0112
       }
-    ]
+    ],
+    "elapsed_seconds": 0.0724,
+    "passed": 14,
+    "failed": 0
   },
   "interface_checks": {
-    "checked_at_utc": "2026-11-02T06:02:23.727204+00:00",
+    "checked_at_utc": "2026-11-07T04:31:54.678512+00:00",
     "passed": 5,
     "failed": 0,
     "streamlit_exceptions": [],
@@ -205,8 +207,8 @@
   },
   "delivered_engine_suite": {
     "command": "python -m unittest discover -s tests",
-    "tests_run": 10,
-    "passed": 10,
+    "tests_run": 13,
+    "passed": 13,
     "failed": 0
   },
   "executed_notebook": {
@@ -228,5 +230,17 @@
     "union_baskets": 108610,
     "original_catalogue_products": 98,
     "alternative_model_products": 97
+  },
+  "recommendation_add_suite": {
+    "checked_at_utc": "2026-11-07T04:31:54.678512+00:00",
+    "tests_run": 3,
+    "passed": 3,
+    "failed": 0,
+    "cases": [
+      "empty-basket popularity add updates basket, total and exclusions",
+      "rule recommendation add updates evidence and ranking; removal makes item eligible again",
+      "rare-product fallback add preserves warning, exclusions and clear behaviour"
+    ],
+    "browser_verified": true
   }
 }

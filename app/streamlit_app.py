@@ -188,8 +188,12 @@ with recommendation_zone:
         st.caption("up to 5 suggestions, ordered by highest lift. products already in the basket are excluded.")
         for suggestion in suggestions:
             item = suggestion["item"]
-            st.markdown(f"**{name(item)}**")
-            st.caption(f"{details(item)} · {strength(float(suggestion['lift']))}")
+            description_column, button_column = st.columns([3, 1])
+            with description_column:
+                st.markdown(f"**{name(item)}**")
+                st.caption(f"{details(item)} · {strength(float(suggestion['lift']))}")
+            with button_column:
+                st.button("add", key=f"recommend_{item}", on_click=add_item, args=(item,), width="stretch")
             triggers = ", ".join(name(value) for value in sorted(suggestion["antecedents"]))
             st.write(
                 f"because your basket contains {triggers}, customers who buy these also buy "
@@ -225,8 +229,12 @@ with recommendation_zone:
             st.write("no new popular product is available for this basket.")
         for suggestion in popular_suggestions:
             item = suggestion["item"]
-            st.markdown(f"**{name(item)}**")
-            st.caption(f"{details(item)} · popular product")
+            description_column, button_column = st.columns([3, 1])
+            with description_column:
+                st.markdown(f"**{name(item)}**")
+                st.caption(f"{details(item)} · popular product")
+            with button_column:
+                st.button("add", key=f"popular_{item}", on_click=add_item, args=(item,), width="stretch")
             st.write(f"popular fallback: no basket rule fired. in {float(suggestion.get('support', 0)):.1%} of all baskets.")
             st.caption("support n/a · confidence n/a · lift n/a · strength n/a")
             st.divider()

@@ -28,7 +28,7 @@ the requirements file pins the environment used here. the supplied data, execute
 - `reports/benchmark.md`: the four measured support runs and the memory-error experiment.
 - `reports/analysis_results.json`: the numeric results exported by the notebook.
 - `reports/duplicate_products.md`: the full catalogue scan, baguette-pair investigation and measured 97-feature sensitivity run.
-- `tests/test_recommender.py` and `tests/test_duplicate_products.py`: the repeatable local engine and data-preparation checks.
+- `tests/test_recommender.py`, `tests/test_duplicate_products.py` and `tests/test_streamlit_app.py`: local engine, data-preparation and recommendation-button interaction checks.
 
 the data has 8,379,837 line items, 1,000,000 baskets and 98 products, from 2026-01-01 to 2026-12-31. the mean basket size is 8.380. there are no missing values or repeated basket-product pairs. transaction id is the basket key. the supplied catalogue has `Item_EN`, although the brief describes `Item_FR`. i keep the original french item keys and use the english names for display.
 
@@ -67,7 +67,7 @@ i would re-mine each month using recent baskets, and check again after major cat
 
 ## recommendation behaviour
 
-a rule fires when every antecedent item is in the basket. already selected products are removed. when several rules suggest the same product, the one with the highest lift is kept. the final suggestions are sorted by lift and limited to five. confidence, support and item names break ties in a stable order. a nonempty rule list is not padded with popular products.
+a rule fires when every antecedent item is in the basket. already selected products are removed. when several rules suggest the same product, the one with the highest lift is kept. the final suggestions are sorted by lift and limited to five. confidence, support and item names break ties in a stable order. a nonempty rule list is not padded with popular products. each rule and popularity card has its own add button. clicking it adds the product to the basket, updates the total and immediately removes that product from the suggestions.
 
 an empty or unmatched basket uses the most popular products instead. this is clearly labelled, and its rule metrics are n/a. every real suggestion displays name, category, price, support, confidence, lift and all triggering items. the strength labels use lift: weak above 1 and below 1.2, moderate from 1.2, strong from 2, very strong from 4. these are display labels, not statistical certainty.
 
@@ -75,13 +75,13 @@ the rules that fired section shows the exact rule used for each visible suggesti
 
 ## checks and limitations
 
-all 14 local engine and artifact check groups passed. the 10 delivered unittest cases also passed: 7 recommendation tests and 3 duplicate-product tests. the latter independently read the original zip, check the union and overlap counts, and confirm the original 98-product model and the sensitivity parameters. repeat them from this project folder with the same virtual environment:
+all 14 local engine and artifact check groups passed. the 13 delivered unittest cases also passed: 7 recommendation tests, 3 duplicate-product tests and 3 streamlit interaction tests for recommendation buttons. the duplicate-product tests independently read the original zip, check the union and overlap counts, and confirm the original 98-product model and the sensitivity parameters. repeat them from this project folder with the same virtual environment:
 
 ```bash
 python -m unittest discover -s tests
 ```
 
-all 5 interface interaction groups passed with no streamlit exceptions. that interface record is dated 2026-11-02. it checks the real saved rules and actual button, search, category, remove and clear interactions; the 97-feature analysis does not replace the application model. the engine and artifact checks also use controlled rule fixtures for subset and ranking cases. no remote tests or ci jobs were used.
+all 5 interface interaction groups passed with no streamlit exceptions. the interface checks were repeated locally on 2026-11-06. the three additional interaction tests cover adding from rule cards, empty-basket popularity cards and rare-product fallback cards, including totals, item exclusion, removal and clearing. these checks use the real saved rules and actual button, search, category, remove and clear interactions; the 97-feature analysis does not replace the application model. the engine and artifact checks also use controlled rule fixtures for subset and ranking cases. no remote tests or ci jobs were used.
 
 | case | check and result |
 | --- | --- |
@@ -138,3 +138,9 @@ these are captures of the running application.
 ![the exact rules behind suggestions](reports/screenshots/fired_rules.png)
 
 ![a rare product and popularity fallback](reports/screenshots/rare_product.png)
+
+### adding a recommendation
+
+each suggestion has an add button. this capture shows beef steak added directly from a rule card: the basket contains charcoal and beef steak, while the updated recommendation cards exclude both products.
+
+![adding a recommended product](reports/screenshots/recommendation_added.png)
